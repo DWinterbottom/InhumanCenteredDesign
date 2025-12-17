@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Games For Crabs - Inhuman Centric Design</title>
+    <style>
+        body {
+            background-color: rgb(42, 7, 75);
+            color: rgb(226, 50, 226);
+            align-content: center;
+            text-align: center;
+            font-weight: bold;
+            font-size: larger;
+        }
+        a{
+            text-decoration: underline;
+            font-weight: bolder;
+        }
+        a.live{
+            color: rgb(255, 101, 255);
+        }
+        a.live:hover{            
+            color: rgb(255, 0, 255);
+        }
+        a.opened{            
+            
+            color: rgb(135, 41, 163);
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Games For Crabs</h1>
+    <p>
+        PLACEHOLDER FOR SETTING UP PAGES/DOMAIN REDIRECTION <br>
+        Updated text will follow, then I'll get the form itself working.
+    </p>
+    <a class="live" onclick='item_clicked(this, "brief")'>• Wut?</a>
+    <section id="brief">
+        <p>Brief</p>
+        <a class="live" onclick='item_clicked(this, "more")'>• Tell me more</a>
+    <section id="more">
+        <p>More</p>
+        <a class="live" onclick='item_clicked(this, "form")'>• I'm interested</a>
+    <section id="form">
+        <p>
+            Form
+            Submit<br>
+            <a class="submit live" onclick='submit(this)'>• Here are my Details</a>
+        </p>
+    </section>
+    </section>
+    </section>
+    <script lang="javascript">
+        function de_live(item)
+        {
+            item.classList.remove("live");
+            item.classList.add("opened");
+        }
+
+        function submit(trigger)
+        {
+            if (trigger.classList.contains("live"))
+            {
+                de_live(trigger);
+                //Submission logic
+                trigger.innerHTML += " (Submitted)";
+            }
+        }
+
+        function item_clicked(item, name)
+        {
+            de_live(item);
+            let elem = document.getElementById(name);
+            if (elem)
+            {
+                elem.hidden = false;
+            }
+        }
+
+        function initial_hide()
+        {
+            let brief = document.getElementById("brief");
+            brief.hidden = true;            
+            let more = document.getElementById("more");
+            more.hidden = true;
+            let form = document.getElementById("form");
+            form.hidden = true;
+        }
+
+        initial_hide()
+    </script>
+</body>
+
+</html>
