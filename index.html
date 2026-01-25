@@ -1,51 +1,152 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Games For Crabs - Inhuman Centric Design</title>
+    <title>Games For Crabs - Inhuman-Centered Design</title>
     <style>
         body {
-            background-color: rgb(42, 7, 75);
+            background-color: rgb(30, 2, 56);
             color: rgb(226, 50, 226);
             align-content: center;
             text-align: center;
             font-weight: bold;
             font-size: larger;
         }
+        p {
+            max-width: 60em;
+            margin:auto;
+            text-align: left;
+            margin-bottom: 1ex;
+        }
+        p.form {
+            text-align: center;
+        }
         a{
             text-decoration: underline;
             font-weight: bolder;
         }
+        b{
+            font-weight: bolder;
+        }
+
+        table.buttons{
+            margin: auto;
+        }
+        td.to_left{
+            text-align: right;
+            width: 20em;
+        }        
+        td.to_right{
+            text-align: left;
+            width: 20em;
+        }
+
         a.live{
             color: rgb(255, 101, 255);
         }
         a.live:hover{            
             color: rgb(255, 0, 255);
         }
-        a.opened{            
-            
+        a.opened{
             color: rgb(135, 41, 163);
             font-weight: normal;
+        }
+        input[type="text"]{
+            color: inherit;
+            border: 2px solid rgb(255, 101, 255);
+            background-color: rgb(15, 1, 28);;
+            border-radius: 4px;
+        }
+        input[type="radio"]{
+            accent-color: rgb(255, 101, 255);
+            color: rgb(15, 1, 28);
         }
     </style>
 </head>
 <body>
     <h1>Games For Crabs</h1>
-    <p>
-        PLACEHOLDER FOR SETTING UP PAGES/DOMAIN REDIRECTION <br>
-        Updated text will follow, then I'll get the form itself working.
-    </p>
     <a class="live" onclick='item_clicked(this, "brief")'>• Wut?</a>
     <section id="brief">
-        <p>Brief</p>
-        <a class="live" onclick='item_clicked(this, "more")'>• Tell me more</a>
+    <p>
+        This thing started as a private joke.<br>
+        I was reading about <a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">Human-Centred Design</a> and I got a silly phrase stuck in my head: Human-Centered Design implies the existence of <b>Inhuman-Centered Design</b>!
+    </p>
+    <p>    
+        It got me thinking about how I make games, about yet another set of unexamined assumptions. And that got me thinking: What can designing for non-humans teach us about how we design for humans?<br>
+        It would be awesome to explore the idea with other designers, see how others approach the idea; the problems they see, the solutions they find, and the processes they use.
+    </p>
+
+    <p>
+        So, here's the idea for the weekend:<br>
+        We start off by presenting a selection of species briefs, not just crabs, some more humanesque than others.<br>
+        There'll be a small number of talks, a mix of guided/themed time and unstructured time. A few rally points in the middle to catch up with what everyone else has been up to.<br>
+        Then we'll finish off with some space to share what we've been working on, or our final thoughts.<br>
+        It'll be your call on how to approach it: Make a prototype? Great. Write a manifesto? Also great. Discuss and work through your thoughts? Brilliant.<br>
+        There's no pressure to create a final product, leaving you free to collaborate in ways that work for you.<br>
+        Explore how you make games for humans by considering the opposite.
+    </p>
+
+    <a class="live" onclick='item_clicked(this, "more")'>• Tell me more</a>
     <section id="more">
-        <p>More</p>
+        <p>
+            You're probably wondering who's running this thing: I'm Dave Winterbottom and games have taken over my life - I work in the video games industry, I design tabletop games as a hobby, I perform a live game design show, I'm working towards a PhD on the adaptation of cultural materials to games, and am generally a <em>little</em> bit obsessive about them. I'm particularly interested in how we make games, the tools we use and the assumptions we make.<br>
+            I've run design and improv workshops before but this is very much out of my comfort zone as an organiser. However, I really think it's worth running.
+        </p>        
+        <p>
+            We need a group of people who are passionate about doing game design, who are actively engaged with the craft of making games. Folks who are willing to think and speak and chat and listen, collaborating in a temporary community of inhuman-centered-designers, making for a dynamic and insightful weekend.<br>
+            You might be a hobbyist designer, an indie creator, an industry professional, or identify as something else. The event is, as much as possible, agnostic to particular styles or mediums of games, since there is so much potential for cross-pollination of ideas.<br>
+            If you love to think about <b>how</b> we do game design, if you want to explore a new facet of that practice, and if you want to see how others' approaches differ from your own, then I hope you'll come along and be part of it.
+        </p>
+        <p>
+            The event will be on the weekend of July 18th-19th 2026 at the <a href="https://garrisonhotel.co.uk/">Garrison Hotel</a> in Sheffield.
+            Starting on Saturday at 10am and finishing on Sunday at 7pm, with an optional chat in the bar on the Friday night.
+            I'm going to try and keep the cost low, probably around £35, with an option to contribute more if you're able. This is to pay for the function room, and hopefully for a speaker or two.
+            At this stage I'm not sure quite how many places will be available, it'll depend on the amount of interest shown and subsequent planning.
+        </p>
+        
+
         <a class="live" onclick='item_clicked(this, "form")'>• I'm interested</a>
     <section id="form">
-        <p>
-            Form
-            Submit<br>
-            <a class="submit live" onclick='submit(this)'>• Here are my Details</a>
+        <p class="form">
+            At this stage I'm just trying to work out who is interested, so if you are please fill out the details below
+        </p>
+        <p class="form">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name" size=35/>
+        </p>
+        <p class="form">
+            <label for="email">Contact Email</label><br>
+            <input type="text" name="email" id="email" size=35/>
+        </p>
+        <p class="form">
+            <b>How likely do you think you are to attend?</b><br>
+            <table class="buttons">
+                <tr>
+                    <td class="to_left">
+                        <label for="1">Unlikely</label>
+                    </td>
+                    <td class = buttons>
+                        <input type="radio" name="likelyhood" id="likelyhood.1" value="1"/>
+                        <input type="radio" name="likelyhood" id="likelyhood.2" value="2"/>
+                        <input type="radio" name="likelyhood" id="likelyhood.3" value="3" checked/>
+                        <input type="radio" name="likelyhood" id="likelyhood.4" value="4"/>
+                        <input type="radio" name="likelyhood" id="likelyhood.5" value="5"/>
+                    </td>
+                    <td class="to_right">
+                        <label for="5">Almost Certainly</label>
+                    </td>
+                </tr>
+            </table>
+        </p>
+        <p class="form">
+            <label for="question">Do you have a question you'd like me to add to a future FAQ?</label><br>
+            <input type="text" name="question" id="question" size=35/>
+            
+        </p>
+        <a class="submit live" onclick='submit(this)'>• Right, sign me up</a>
+        <p>                
+            So, what comes next? <br>
+            I'm going to be running a small-scale test in January, then reflecting on that and opening sign-ups towards the end of February. I'll send out an email when the form opens.<br>
+            I'll then confirm places by email in mid-to-late March, with payment due at the start of July.
         </p>
     </section>
     </section>
@@ -57,13 +158,77 @@
             item.classList.add("opened");
         }
 
+        function send_url(url, data, element_to_update) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+
+            //Send the proper header information along with the request
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onreadystatechange = function() { // Call a function when the state changes.
+                if (this.readyState === XMLHttpRequest.DONE)
+                {
+
+                    if( this.status === 200 || this.status == 0 ) { //Will get a zero status if CORS blocks reading the response, but this is fine
+                        element_to_update.innerHTML += " (Submitted)"
+                        if (this.status == 0)
+                        {
+                            console.log("CORS blocking the response is expected. I'd love it if it didn't error, but your submission should be posted.")   
+                        }
+                    }
+                    else
+                    {
+                        element_to_update.innerHTML += " (Error)"
+                    }
+                }
+            }
+            xhr.send(data);
+        }
+
+        const form_id = "1FAIpQLSdGTgwjutTgD3HFiO26Rvz31-b8sWVLV_RdcdcOpCdmOTd_lA";
+        const fields = {
+            "name":"entry.1353002205",
+            "email":"entry.942055065",
+            "likelyhood":"entry.1008409024",
+            "question":"entry.631908339",
+        }
         function submit(trigger)
         {
             if (trigger.classList.contains("live"))
             {
                 de_live(trigger);
-                //Submission logic
-                trigger.innerHTML += " (Submitted)";
+                
+                let url = "https://docs.google.com/forms/d/e/"+form_id+"/formResponse"
+                let values = ""
+                let append = (item_name, value) =>
+                {
+                    if (values)
+                    {
+                        values += "&"
+                    }
+                    values += fields[item_name]+"="+encodeURIComponent(value);    
+                };
+                for (let item_name in fields){
+                    let element = document.getElementById(item_name);
+                    if (element)
+                    {
+                        append(item_name, element.value);
+                    }
+                    else //Handle radio button
+                    {
+                        let options = document.getElementsByName(item_name);
+                        for (let idx in options)
+                        {
+                            let option = options[idx];
+                            if (option.checked)
+                            {                                
+                                append(item_name, option.value);
+                                break;
+                            }
+                        }
+                    }
+                }
+                send_url(url, values, trigger);
             }
         }
 
