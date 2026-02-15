@@ -266,11 +266,14 @@
         function initial_hide()
         {
             let brief = document.getElementById("brief");
-            brief.hidden = true;            
+            brief.hidden = true;
+            brief.ariaLive = "polite";   
             let more = document.getElementById("more");
             more.hidden = true;
+            more.ariaLive = "polite";   
             let form = document.getElementById("form");
             form.hidden = true;
+            form.ariaLive = "polite";
         }
 
         initial_hide()
