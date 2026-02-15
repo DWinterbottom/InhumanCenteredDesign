@@ -3,18 +3,29 @@
 <head>
     <title>Games For Crabs - Inhuman-Centered Design - Expression of Interest Form</title>
     <style>
+        :root
+        {
+            --main-bg-color: rgb(15, 1, 28);            
+            --main-text-color: rgb(241, 100, 241);
+            --link-text-color: rgb(255, 141, 255);
+            --link-bg-color: rgb(5, 1, 10);            
+        }
+
         body {
-            background-color: rgb(30, 2, 56);
-            color: rgb(226, 50, 226);
+            background-color: var(--main-bg-color);
+            color: var(--main-text-color);
             align-content: center;
             text-align: center;
             font-weight: bold;
-            font-size: larger;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4;
+            
         }
         p {
             max-width: 60em;
             margin:auto;
-            text-align: left;
+            text-align: justify;
             margin-bottom: 1ex;
         }
         p.form {
@@ -42,9 +53,10 @@
         a{
             padding: 3px;
             text-decoration: none;
+            color: var(--link-text-color);
         }
         a.live{
-            color: rgb(255, 101, 255);
+            color: var(--link-text-color);
             background-color: rgb(45, 3, 84);
             border: 2px solid rgb(255, 0, 255);
             border-radius: 4px;
@@ -59,7 +71,7 @@
         }
         input[type="text"]{
             color: inherit;
-            border: 2px solid rgb(255, 101, 255);
+            border: 2px solid var(--link-text-color);
             background-color: rgb(15, 1, 28);;
             border-radius: 4px;
         }
