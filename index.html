@@ -71,6 +71,7 @@
         table{
             margin:auto;
             margin-bottom: 1ex;
+            border-radius: 4px;
         }
         th, td {
             margin: auto;
@@ -115,14 +116,14 @@
     </section>
     <section id="opened_items"></section>
     <section id="buttons">
-        Scuttle Around?
+        <span id="scuttle">Scuttle Around?</span>
         <br>
         <a class="live" onclick='item_clicked(this, "aims")'>Aims and Outline</a>
         <a class="live" onclick='item_clicked(this, "motivation")'>The Motivation</a>
         <a class="live" onclick='item_clicked(this, "speaker")'>Schedule &amp; Speaker</a>
         <br>
         <br>
-        <a class="live" href="" target="_blank">Open Sign-up Form &#x1F517</a>
+        <a class="live external" href="" target="_blank">Open Sign-up Form &#x1F517</a>
     </section>
     
     <section id="aims" class="closed">
@@ -393,6 +394,26 @@
         </p>
     </section>
     <script lang="javascript">
+        function check_scuttle()
+        {
+            let buttons = document.getElementById("buttons");
+            let live = buttons.getElementsByClassName("live");
+            let anyLiveAndNotExternal = false;
+            for(let elem of live)
+            {
+                if (!elem.classList.contains("external"))
+                { 
+                    anyLiveAndNotExternal = true;
+                    break;  
+                }
+            }
+
+            if(!anyLiveAndNotExternal)
+            {
+                let scuttle = document.getElementById("scuttle");
+                scuttle.innerText = "You have scuttled all over."
+            }
+        }
 
         function item_clicked(item, name)
         {
@@ -411,6 +432,7 @@
                 opened_container.appendChild(item);
                 opened_container.appendChild(elem);
             }
+            check_scuttle();
         }
 
         function initial_hide()
